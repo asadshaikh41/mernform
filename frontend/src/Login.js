@@ -41,7 +41,7 @@ const Login = () => {
     }
 
     try {
-      const response = await axios.post('https://mernform-api.vercel.app/login', { email, password });
+      const response = await axios.post('https://mernform-apis.vercel.app/login', { email, password });
 
       if (response.status === 200) {
         // Optionally, store user data or authentication token here
