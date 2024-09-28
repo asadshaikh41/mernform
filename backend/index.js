@@ -10,16 +10,10 @@ const app = express();
 
 // Middlewares
 app.use(bodyParser.json());
-app.use(cors(
-  {
-    origin: [""],
-    methods:["POST", "GET"],
-    credentials:true
-  }
-));
+app.use(cors());
 
 // MongoDB Connection
-mongoose.connect('mongodb+srv://asad94758:@Asad9284@cluster0.yepgfhq.mongodb.net/authApp?retryWrites=true&w=majority&appName=Cluster0', {
+mongoose.connect('mongodb+srv://asad9284:Asad9284@cluster0.yepgfhq.mongodb.net/authApp?retryWrites=true&w=majority&appName=Cluster0', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
