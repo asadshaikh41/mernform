@@ -44,7 +44,7 @@ const Register = () => {
     }
 
     try {
-      const response = await axios.post('https://mernform-apis.vercel.app/register', {
+      const response = await axios.post('http://localhost:5000/register', {
         username,
         email,
         password,
