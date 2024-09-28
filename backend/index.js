@@ -13,16 +13,12 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // MongoDB Connection
-mongoose.connect('mongodb+srv://asad9284:Asad9284@cluster0.yepgfhq.mongodb.net/authApp?retryWrites=true&w=majority&appName=Cluster0', {
+mongoose.connect('mongodb+srv://asad9284:Asad9284@cluster0.yepgfhq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
 .then(() => console.log('MongoDB connected'))
 .catch((err) => console.error('MongoDB connection error:', err));
-
-app.get("/",(req,res)=>{
-  res.json({massage:"hello world"});
-})
 
 // User Schema
 const UserSchema = new mongoose.Schema({
