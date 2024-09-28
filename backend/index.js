@@ -8,9 +8,16 @@ const jwt = require('jsonwebtoken');
 
 const app = express();
 
+const corsConfig={
+  origin:"*",
+  credential:true,
+  methods:["GET", "POST", "PUT", "DELETE"],
+};
+app.options("", cors(corsConfig))
+
 // Middlewares
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors(corsConfig));
 
 // MongoDB Connection
 mongoose.connect('mongodb+srv://asad9284:Asad9284@cluster0.yepgfhq.mongodb.net/authApp?retryWrites=true&w=majority&appName=Cluster0', {
