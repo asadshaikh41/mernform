@@ -20,6 +20,10 @@ mongoose.connect('mongodb+srv://asad9284:Asad9284@cluster0.yepgfhq.mongodb.net/a
 .then(() => console.log('MongoDB connected'))
 .catch((err) => console.error('MongoDB connection error:', err));
 
+app.get("/",(req,res)=>{
+  res.json({massage:"hello world"});
+})
+
 // User Schema
 const UserSchema = new mongoose.Schema({
   username: { type: String, required: true },
